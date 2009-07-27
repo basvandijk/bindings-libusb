@@ -6,10 +6,12 @@ synopsis:
 version: 0.0.5
 license: BSD3
 license-file: LICENSE
-maintainer: Maurício C. Antunes
+maintainer: Maurício C. Antunes <mauricio.antunes@gmail.com>
 author: Maurício C. Antunes
 build-type: Simple
 category: FFI
+bug-reports: http://bitbucket.org/mauricio/bindings-libusb/issues
+stability: Needs users feedback
 library
   hs-source-dirs: src
   extensions:
