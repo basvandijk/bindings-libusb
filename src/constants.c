@@ -1,0 +1,377 @@
+#include <libusb.h>
+
+uint8_t _LIBUSB_REQUEST_GET_STATUS (void)
+{
+    return LIBUSB_REQUEST_GET_STATUS;
+}
+
+uint8_t _LIBUSB_REQUEST_CLEAR_FEATURE (void)
+{
+    return LIBUSB_REQUEST_CLEAR_FEATURE;
+}
+
+uint8_t _LIBUSB_REQUEST_SET_FEATURE (void)
+{
+    return LIBUSB_REQUEST_SET_FEATURE;
+}
+
+uint8_t _LIBUSB_REQUEST_SET_ADDRESS (void)
+{
+    return LIBUSB_REQUEST_SET_ADDRESS;
+}
+
+uint8_t _LIBUSB_REQUEST_GET_DESCRIPTOR (void)
+{
+    return LIBUSB_REQUEST_GET_DESCRIPTOR;
+}
+
+uint8_t _LIBUSB_REQUEST_SET_DESCRIPTOR (void)
+{
+    return LIBUSB_REQUEST_SET_DESCRIPTOR;
+}
+
+uint8_t _LIBUSB_REQUEST_GET_CONFIGURATION (void)
+{
+    return LIBUSB_REQUEST_GET_CONFIGURATION;
+}
+
+uint8_t _LIBUSB_REQUEST_SET_CONFIGURATION (void)
+{
+    return LIBUSB_REQUEST_SET_CONFIGURATION;
+}
+
+uint8_t _LIBUSB_REQUEST_GET_INTERFACE (void)
+{
+    return LIBUSB_REQUEST_GET_INTERFACE;
+}
+
+uint8_t _LIBUSB_REQUEST_SET_INTERFACE (void)
+{
+    return LIBUSB_REQUEST_SET_INTERFACE;
+}
+
+uint8_t _LIBUSB_REQUEST_SYNCH_FRAME (void)
+{
+    return LIBUSB_REQUEST_SYNCH_FRAME;
+}
+
+uint8_t _LIBUSB_REQUEST_TYPE_STANDARD (void)
+{
+    return LIBUSB_REQUEST_TYPE_STANDARD;
+}
+
+uint8_t _LIBUSB_REQUEST_TYPE_CLASS (void)
+{
+    return LIBUSB_REQUEST_TYPE_CLASS;
+}
+
+uint8_t _LIBUSB_REQUEST_TYPE_VENDOR (void)
+{
+    return LIBUSB_REQUEST_TYPE_VENDOR;
+}
+
+uint8_t _LIBUSB_REQUEST_TYPE_RESERVED (void)
+{
+    return LIBUSB_REQUEST_TYPE_RESERVED;
+}
+
+uint8_t _LIBUSB_RECIPIENT_DEVICE (void)
+{
+    return LIBUSB_RECIPIENT_DEVICE;
+}
+
+uint8_t _LIBUSB_RECIPIENT_INTERFACE (void)
+{
+    return LIBUSB_RECIPIENT_INTERFACE;
+}
+
+uint8_t _LIBUSB_RECIPIENT_ENDPOINT (void)
+{
+    return LIBUSB_RECIPIENT_ENDPOINT;
+}
+
+uint8_t _LIBUSB_RECIPIENT_OTHER (void)
+{
+    return LIBUSB_RECIPIENT_OTHER;
+}
+
+int _LIBUSB_SUCCESS (void)
+{
+    return LIBUSB_SUCCESS;
+}
+
+int _LIBUSB_ERROR_IO (void)
+{
+    return LIBUSB_ERROR_IO;
+}
+
+int _LIBUSB_ERROR_INVALID_PARAM (void)
+{
+    return LIBUSB_ERROR_INVALID_PARAM;
+}
+
+int _LIBUSB_ERROR_ACCESS (void)
+{
+    return LIBUSB_ERROR_ACCESS;
+}
+
+int _LIBUSB_ERROR_NO_DEVICE (void)
+{
+    return LIBUSB_ERROR_NO_DEVICE;
+}
+
+int _LIBUSB_ERROR_NOT_FOUND (void)
+{
+    return LIBUSB_ERROR_NOT_FOUND;
+}
+
+int _LIBUSB_ERROR_BUSY (void)
+{
+    return LIBUSB_ERROR_BUSY;
+}
+
+int _LIBUSB_ERROR_TIMEOUT (void)
+{
+    return LIBUSB_ERROR_TIMEOUT;
+}
+
+int _LIBUSB_ERROR_OVERFLOW (void)
+{
+    return LIBUSB_ERROR_OVERFLOW;
+}
+
+int _LIBUSB_ERROR_PIPE (void)
+{
+    return LIBUSB_ERROR_PIPE;
+}
+
+int _LIBUSB_ERROR_INTERRUPTED (void)
+{
+    return LIBUSB_ERROR_INTERRUPTED;
+}
+
+int _LIBUSB_ERROR_NO_MEM (void)
+{
+    return LIBUSB_ERROR_NO_MEM;
+}
+
+int _LIBUSB_ERROR_NOT_SUPPORTED (void)
+{
+    return LIBUSB_ERROR_NOT_SUPPORTED;
+}
+
+int _LIBUSB_ERROR_OTHER (void)
+{
+    return LIBUSB_ERROR_OTHER;
+}
+
+uint8_t _LIBUSB_CLASS_PER_INTERFACE (void)
+{
+    return LIBUSB_CLASS_PER_INTERFACE;
+}
+
+uint8_t _LIBUSB_CLASS_AUDIO (void)
+{
+    return LIBUSB_CLASS_AUDIO;
+}
+
+uint8_t _LIBUSB_CLASS_COMM (void)
+{
+    return LIBUSB_CLASS_COMM;
+}
+
+uint8_t _LIBUSB_CLASS_HID (void)
+{
+    return LIBUSB_CLASS_HID;
+}
+
+uint8_t _LIBUSB_CLASS_PRINTER (void)
+{
+    return LIBUSB_CLASS_PRINTER;
+}
+
+uint8_t _LIBUSB_CLASS_PTP (void)
+{
+    return LIBUSB_CLASS_PTP;
+}
+
+uint8_t _LIBUSB_CLASS_MASS_STORAGE (void)
+{
+    return LIBUSB_CLASS_MASS_STORAGE;
+}
+
+uint8_t _LIBUSB_CLASS_HUB (void)
+{
+    return LIBUSB_CLASS_HUB;
+}
+
+uint8_t _LIBUSB_CLASS_DATA (void)
+{
+    return LIBUSB_CLASS_DATA;
+}
+
+uint8_t _LIBUSB_CLASS_VENDOR_SPEC (void)
+{
+    return LIBUSB_CLASS_VENDOR_SPEC;
+}
+
+uint8_t _LIBUSB_DT_DEVICE (void)
+{
+    return LIBUSB_DT_DEVICE;
+}
+
+uint8_t _LIBUSB_DT_CONFIG (void)
+{
+    return LIBUSB_DT_CONFIG;
+}
+
+uint8_t _LIBUSB_DT_STRING (void)
+{
+    return LIBUSB_DT_STRING;
+}
+
+uint8_t _LIBUSB_DT_INTERFACE (void)
+{
+    return LIBUSB_DT_INTERFACE;
+}
+
+uint8_t _LIBUSB_DT_ENDPOINT (void)
+{
+    return LIBUSB_DT_ENDPOINT;
+}
+
+uint8_t _LIBUSB_DT_HID (void)
+{
+    return LIBUSB_DT_HID;
+}
+
+uint8_t _LIBUSB_DT_REPORT (void)
+{
+    return LIBUSB_DT_REPORT;
+}
+
+uint8_t _LIBUSB_DT_PHYSICAL (void)
+{
+    return LIBUSB_DT_PHYSICAL;
+}
+
+uint8_t _LIBUSB_DT_HUB (void)
+{
+    return LIBUSB_DT_HUB;
+}
+
+uint8_t _LIBUSB_ENDPOINT_IN (void)
+{
+    return LIBUSB_ENDPOINT_IN;
+}
+
+uint8_t _LIBUSB_ENDPOINT_OUT (void)
+{
+    return LIBUSB_ENDPOINT_OUT;
+}
+
+uint8_t _LIBUSB_TRANSFER_TYPE_CONTROL (void)
+{
+    return LIBUSB_TRANSFER_TYPE_CONTROL;
+}
+
+uint8_t _LIBUSB_TRANSFER_TYPE_ISOCHRONOUS (void)
+{
+    return LIBUSB_TRANSFER_TYPE_ISOCHRONOUS;
+}
+
+uint8_t _LIBUSB_TRANSFER_TYPE_BULK (void)
+{
+    return LIBUSB_TRANSFER_TYPE_BULK;
+}
+
+uint8_t _LIBUSB_TRANSFER_TYPE_INTERRUPT (void)
+{
+    return LIBUSB_TRANSFER_TYPE_INTERRUPT;
+}
+
+uint8_t _LIBUSB_ISO_SYNC_TYPE_NONE (void)
+{
+    return LIBUSB_ISO_SYNC_TYPE_NONE;
+}
+
+uint8_t _LIBUSB_ISO_SYNC_TYPE_ASYNC (void)
+{
+    return LIBUSB_ISO_SYNC_TYPE_ASYNC;
+}
+
+uint8_t _LIBUSB_ISO_SYNC_TYPE_ADAPTIVE (void)
+{
+    return LIBUSB_ISO_SYNC_TYPE_ADAPTIVE;
+}
+
+uint8_t _LIBUSB_ISO_SYNC_TYPE_SYNC (void)
+{
+    return LIBUSB_ISO_SYNC_TYPE_SYNC;
+}
+
+uint8_t _LIBUSB_ISO_USAGE_TYPE_DATA (void)
+{
+    return LIBUSB_ISO_USAGE_TYPE_DATA;
+}
+
+uint8_t _LIBUSB_ISO_USAGE_TYPE_FEEDBACK (void)
+{
+    return LIBUSB_ISO_USAGE_TYPE_FEEDBACK;
+}
+
+uint8_t _LIBUSB_ISO_USAGE_TYPE_IMPLICIT (void)
+{
+    return LIBUSB_ISO_USAGE_TYPE_IMPLICIT;
+}
+
+int _LIBUSB_TRANSFER_COMPLETED (void)
+{
+    return LIBUSB_TRANSFER_COMPLETED;
+}
+
+int _LIBUSB_TRANSFER_ERROR (void)
+{
+    return LIBUSB_TRANSFER_ERROR;
+}
+
+int _LIBUSB_TRANSFER_TIMED_OUT (void)
+{
+    return LIBUSB_TRANSFER_TIMED_OUT;
+}
+
+int _LIBUSB_TRANSFER_CANCELLED (void)
+{
+    return LIBUSB_TRANSFER_CANCELLED;
+}
+
+int _LIBUSB_TRANSFER_STALL (void)
+{
+    return LIBUSB_TRANSFER_STALL;
+}
+
+int _LIBUSB_TRANSFER_NO_DEVICE (void)
+{
+    return LIBUSB_TRANSFER_NO_DEVICE;
+}
+
+int _LIBUSB_TRANSFER_OVERFLOW (void)
+{
+    return LIBUSB_TRANSFER_OVERFLOW;
+}
+
+uint8_t _LIBUSB_TRANSFER_SHORT_NOT_OK (void)
+{
+    return LIBUSB_TRANSFER_SHORT_NOT_OK;
+}
+
+uint8_t _LIBUSB_TRANSFER_FREE_BUFFER (void)
+{
+    return LIBUSB_TRANSFER_FREE_BUFFER;
+}
+
+uint8_t _LIBUSB_TRANSFER_FREE_TRANSFER (void)
+{
+    return LIBUSB_TRANSFER_FREE_TRANSFER;
+}
+
