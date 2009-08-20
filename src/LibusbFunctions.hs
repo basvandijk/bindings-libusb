@@ -6,7 +6,7 @@ import Foreign.C
 import LibusbTypes
 
 foreign import ccall "libusb_set_debug" libusb_set_debug
-    :: Ptr Libusb_context -> CInt -> IO () ; 
+    :: Ptr Libusb_context -> CInt -> IO () ;
 
 foreign import ccall "libusb_init" libusb_init
     :: Ptr (Ptr Libusb_context) -> IO CInt
@@ -14,8 +14,11 @@ foreign import ccall "libusb_init" libusb_init
 foreign import ccall "libusb_exit" libusb_exit
     :: Ptr Libusb_context -> IO ()
 
+foreign import ccall "&libusb_exit" ptr_libusb_exit
+    :: FunPtr (Ptr Libusb_context -> IO ())
+
 foreign import ccall "libusb_get_device_list" libusb_get_device_list
-    :: Ptr Libusb_context -> Ptr (Ptr Libusb_device) -> IO CInt
+    :: Ptr Libusb_context -> Ptr (Ptr (Ptr Libusb_device)) -> IO CInt
 
 foreign import ccall "libusb_free_device_list" libusb_free_device_list
    :: Ptr (Ptr Libusb_device) -> CInt -> IO ()
@@ -36,6 +39,9 @@ foreign import ccall "libusb_ref_device" libusb_ref_device
 
 foreign import ccall "libusb_unref_device" libusb_unref_device
     :: Ptr Libusb_device -> IO ()
+
+foreign import ccall "&libusb_unref_device" ptr_libusb_unref_device
+    :: FunPtr (Ptr Libusb_device -> IO ())
 
 foreign import ccall "libusb_open" libusb_open
     :: Ptr Libusb_device -> Ptr (Ptr Libusb_device_handle) -> IO CInt
@@ -169,8 +175,8 @@ foreign import ccall "libusb_fill_bulk_transfer"
 
 foreign import ccall "libusb_fill_interrupt_transfer"
  libusb_fill_interrupt_transfer
-    :: Ptr (Libusb_transfer a) -> Ptr Libusb_device_handle -> CUChar -> 
-       Ptr CUChar -> CInt -> FunPtr (Libusb_transfer_cb_fn a) -> 
+    :: Ptr (Libusb_transfer a) -> Ptr Libusb_device_handle -> CUChar ->
+       Ptr CUChar -> CInt -> FunPtr (Libusb_transfer_cb_fn a) ->
        Ptr a -> CUInt -> IO ()
 
 foreign import ccall "libusb_fill_iso_transfer"

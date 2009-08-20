@@ -8,6 +8,7 @@ module Bindings.Libusb (
     libusb_set_debug,
     libusb_init,
     libusb_exit,
+    ptr_libusb_exit,
 
     -- * Device handling and enumeration
 
@@ -22,6 +23,7 @@ module Bindings.Libusb (
     libusb_get_max_packet_size,
     libusb_ref_device,
     libusb_unref_device,
+    ptr_libusb_unref_device,
     libusb_open,
     libusb_open_device_with_vid_pid,
     libusb_close,
@@ -30,10 +32,12 @@ module Bindings.Libusb (
     libusb_set_configuration,
     libusb_claim_interface,
     libusb_release_interface,
+    libusb_set_interface_alt_setting,
     libusb_clear_halt,
     libusb_reset_device,
     libusb_kernel_driver_active,
     libusb_attach_kernel_driver,
+    libusb_detach_kernel_driver,
 
     -- * Miscellaneous
 
@@ -83,11 +87,11 @@ module Bindings.Libusb (
 
     -- | <http://libusb.sourceforge.net/api-1.0/group__desc.html>
 
-    Libusb_device_descriptor,
-    Libusb_endpoint_descriptor,
-    Libusb_interface_descriptor,
-    Libusb_interface,
-    Libusb_config_descriptor,
+    Libusb_device_descriptor(..),
+    Libusb_endpoint_descriptor(..),
+    Libusb_interface_descriptor(..),
+    Libusb_interface(..),
+    Libusb_config_descriptor(..),
     Libusb_class_code,
     _LIBUSB_CLASS_PER_INTERFACE,
     _LIBUSB_CLASS_AUDIO,
