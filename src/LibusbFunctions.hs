@@ -127,11 +127,11 @@ foreign import ccall "libusb_get_string_descriptor_ascii"
  libusb_get_string_descriptor_ascii
     :: Ptr Libusb_device_handle -> Word8 -> Ptr CUChar -> CInt -> IO CInt
 
-foreign import ccall "libusb_get_descriptor" libusb_get_descriptor
+foreign import ccall "libusb_get_descriptor2" libusb_get_descriptor
     :: Ptr Libusb_device_handle -> Word8 -> Word8 -> Ptr CUChar ->
        CInt -> IO CInt
 
-foreign import ccall "libusb_get_string_descriptor"
+foreign import ccall "libusb_get_string_descriptor2"
  libusb_get_string_descriptor
     :: Ptr Libusb_device_handle -> Word8 ->
        Word16 -> Ptr CUChar -> CInt -> IO CInt
@@ -148,52 +148,52 @@ foreign import ccall "libusb_submit_transfer" libusb_submit_transfer
 foreign import ccall "libusb_cancel_transfer" libusb_cancel_transfer
     :: Ptr (Libusb_transfer a) -> IO CInt
 
-foreign import ccall "libusb_control_transfer_get_data"
+foreign import ccall "libusb_control_transfer_get_data2"
  libusb_control_transfer_get_data
     :: Ptr (Libusb_transfer a) -> IO (Ptr CUChar)
 
-foreign import ccall "libusb_control_transfer_get_setup"
+foreign import ccall "libusb_control_transfer_get_setup2"
  libusb_control_transfer_get_setup
     :: Ptr (Libusb_transfer a) -> IO (Ptr Libusb_control_setup)
 
-foreign import ccall "libusb_fill_control_setup"
+foreign import ccall "libusb_fill_control_setup2"
  libusb_fill_control_setup
     :: Ptr CUChar -> Word8 -> Word8 ->
        Word16 -> Word16 -> Word16 -> IO ()
 
-foreign import ccall "libusb_fill_control_transfer"
+foreign import ccall "libusb_fill_control_transfer2"
  libusb_fill_control_transfer
     :: Ptr (Libusb_transfer a) -> Ptr Libusb_device_handle ->
        Ptr CUChar -> FunPtr (Libusb_transfer_cb_fn a) ->
        Ptr a -> CUInt -> IO ()
 
-foreign import ccall "libusb_fill_bulk_transfer"
+foreign import ccall "libusb_fill_bulk_transfer2"
  libusb_fill_bulk_transfer
     :: Ptr (Libusb_transfer a) -> Ptr Libusb_device_handle -> CUChar ->
        Ptr CUChar -> CInt -> FunPtr (Libusb_transfer_cb_fn a) ->
        Ptr a -> CUInt -> IO ()
 
-foreign import ccall "libusb_fill_interrupt_transfer"
+foreign import ccall "libusb_fill_interrupt_transfer2"
  libusb_fill_interrupt_transfer
     :: Ptr (Libusb_transfer a) -> Ptr Libusb_device_handle -> CUChar ->
        Ptr CUChar -> CInt -> FunPtr (Libusb_transfer_cb_fn a) ->
        Ptr a -> CUInt -> IO ()
 
-foreign import ccall "libusb_fill_iso_transfer"
+foreign import ccall "libusb_fill_iso_transfer2"
  libusb_fill_iso_transfer
     :: Ptr (Libusb_transfer a) -> Ptr Libusb_device_handle -> CUChar ->
        Ptr CUChar -> CInt -> CInt -> FunPtr (Libusb_transfer_cb_fn a) ->
        Ptr a -> CUInt -> IO ()
 
-foreign import ccall "libusb_set_iso_packet_lengths"
+foreign import ccall "libusb_set_iso_packet_lengths2"
  libusb_set_iso_packet_lengths
     :: Ptr (Libusb_transfer a) -> CUInt -> IO ()
 
-foreign import ccall "libusb_get_iso_packet_buffer"
+foreign import ccall "libusb_get_iso_packet_buffer2"
  libusb_get_iso_packet_buffer
     :: Ptr (Libusb_transfer a) -> CUInt -> IO (Ptr CUChar)
 
-foreign import ccall "libusb_get_iso_packet_buffer_simple"
+foreign import ccall "libusb_get_iso_packet_buffer_simple2"
  libusb_get_iso_packet_buffer_simple
     :: Ptr (Libusb_transfer a) -> CUInt -> IO (Ptr CUChar)
 

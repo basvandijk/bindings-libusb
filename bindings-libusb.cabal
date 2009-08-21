@@ -3,7 +3,7 @@ name: bindings-libusb
 homepage: http://bitbucket.org/mauricio/bindings
 synopsis:
   Check bindings-common package for directions.
-version: 0.0.6
+version: 0.0.7
 license: BSD3
 license-file: LICENSE
 maintainer: Maurício C. Antunes <mauricio.antunes@gmail.com>
@@ -28,11 +28,11 @@ library
     LibusbConstants
     LibusbFunctions
     LibusbTypes
--- This has to be commented out so that hackage
--- won't complain about a missing library.
---c-sources:
---  src/constants.c
---  src/functions.c
---  src/types.c
---pkgconfig-depends:
---  libusb-1.0 >= 1.0.0
+-- This has to be commented so hackage won't complain
+-- about a missing library.
+--  c-sources:
+--    src/constants.c
+--    src/functions.c
+--    src/types.c
+--  pkgconfig-depends:
+--    libusb-1.0 >= 1.0.0
