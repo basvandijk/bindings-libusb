@@ -20,7 +20,7 @@ library
     bindings-common >= 1 && < 2
   exposed-modules:
     Bindings.Libusb
-    Bindings.Libusb.DataStructures
+    Bindings.Libusb.InitializationDeinitialization
   include-dirs:
     src/include
   extra-libraries:
