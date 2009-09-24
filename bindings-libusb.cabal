@@ -20,7 +20,13 @@ library
     bindings-common >= 1 && < 2
   exposed-modules:
     Bindings.Libusb
+    Bindings.Libusb.Asynchronous
+    Bindings.Libusb.Descriptors
+    Bindings.Libusb.HandlingAndEnumeration
     Bindings.Libusb.InitializationDeinitialization
+    Bindings.Libusb.Miscellaneous
+    Bindings.Libusb.PollingAndTiming
+    Bindings.Libusb.Synchronous
   include-dirs:
     src/include
   extra-libraries:
