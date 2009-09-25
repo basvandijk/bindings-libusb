@@ -55,32 +55,32 @@ import Bindings.Libusb.HandlingAndEnumeration
 #num LIBUSB_TRANSFER_FREE_BUFFER
 #num LIBUSB_TRANSFER_FREE_TRANSFER
 
-#ccall libusb_alloc_transfer , CInt -> IO (Ptr <libusb_transfer>)
+#ccall libusb_alloc_transfer , CInt -> \
+  IO (Ptr <libusb_transfer>)
 #ccall libusb_free_transfer , Ptr <libusb_transfer> -> IO ()
 #ccall libusb_submit_transfer , Ptr <libusb_transfer> -> IO CInt
 #ccall libusb_cancel_transfer , Ptr <libusb_transfer> -> IO CInt
-#cinline libusb_control_transfer_get_data , \
-  Ptr <libusb_transfer> -> IO (Ptr CUChar)
-#cinline libusb_control_transfer_get_setup , \
-  Ptr <libusb_transfer> -> IO (Ptr <libusb_control_setup>)
-#ccall libusb_fill_control_transfer , \
-  Ptr <libusb_transfer> -> Ptr <libusb_device_handle> -> \
-  Ptr CUChar -> <libusb_transfer_cb_fn> -> Ptr () -> CUInt -> IO ()
-#ccall libusb_fill_bulk_transfer , \
-  Ptr <libusb_transfer> -> Ptr <libusb_device_handle> -> \
-  CUChar -> Ptr CUChar -> CInt -> \
-  <libusb_transfer_cb_fn> -> Ptr () -> CUInt -> IO ()
-#ccall libusb_fill_interrupt_transfer , \
-  Ptr <libusb_transfer> -> Ptr <libusb_device_handle> -> \
-  CUChar -> Ptr CUChar -> CInt -> <libusb_transfer_cb_fn> -> \
-  Ptr () -> CUInt -> IO ()
-#ccall libusb_fill_iso_transfer , \
-  Ptr <libusb_transfer> -> Ptr <libusb_device_handle> -> \
-  CUChar -> Ptr CUChar -> CInt -> CInt -> \
-  <libusb_transfer_cb_fn> -> Ptr () -> CUInt -> IO ()
-#ccall libusb_set_iso_packet_lengths , \
-  Ptr <libusb_transfer> -> CUInt -> IO ()
-#ccall libusb_get_iso_packet_buffer , \
-  Ptr <libusb_transfer> -> CUInt -> IO (Ptr CUChar)
-#ccall libusb_get_iso_packet_buffer_simple , \
-  Ptr <libusb_transfer> -> CUInt -> IO (Ptr CUChar)
+#cinline libusb_control_transfer_get_data , Ptr <libusb_transfer> -> \
+  IO (Ptr CUChar)
+#cinline libusb_control_transfer_get_setup , Ptr <libusb_transfer> -> \
+  IO (Ptr <libusb_control_setup>)
+#cinline libusb_fill_control_setup , Ptr CUChar ->  Word8 ->  Word8 -> \
+   Word16 ->  Word16 ->  Word16 -> IO ()
+#cinline libusb_fill_control_transfer , Ptr <libusb_transfer> -> \
+   Ptr <libusb_device_handle> ->  Ptr CUChar -> \
+   <libusb_transfer_cb_fn> ->  Ptr () ->  CUInt -> IO ()
+#cinline libusb_fill_bulk_transfer , Ptr <libusb_transfer> -> \
+   Ptr <libusb_device_handle> ->  CUChar ->  Ptr CUChar ->  CInt -> \
+   <libusb_transfer_cb_fn> ->  Ptr () ->  CUInt -> IO ()
+#cinline libusb_fill_interrupt_transfer , Ptr <libusb_transfer> -> \
+   Ptr <libusb_device_handle> ->  CUChar ->  Ptr CUChar ->  CInt -> \
+   <libusb_transfer_cb_fn> ->  Ptr () ->  CUInt -> IO ()
+#cinline libusb_fill_iso_transfer , Ptr <libusb_transfer> -> \
+   Ptr <libusb_device_handle> ->  CUChar ->  Ptr CUChar ->  CInt -> \
+   CInt ->  <libusb_transfer_cb_fn> ->  Ptr () ->  CUInt -> IO ()
+#cinline libusb_set_iso_packet_lengths , Ptr <libusb_transfer> -> \
+   CUInt -> IO ()
+#cinline libusb_get_iso_packet_buffer , Ptr <libusb_transfer> -> \
+   CUInt -> IO (Ptr CUChar)
+#cinline libusb_get_iso_packet_buffer_simple , Ptr <libusb_transfer> -> \
+   CUInt -> IO (Ptr CUChar)

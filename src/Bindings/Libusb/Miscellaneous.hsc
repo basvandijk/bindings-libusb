@@ -7,6 +7,9 @@ module Bindings.Libusb.Miscellaneous where
 import Foreign
 import Foreign.C
 
+#cinline libusb_cpu_to_le16 , Word16 -> Word16
+#cinline libusb_le16_to_cpu , Word16 -> Word16
+
 #integral_t enum libusb_standard_request
 
 #num LIBUSB_REQUEST_GET_STATUS

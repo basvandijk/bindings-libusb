@@ -141,10 +141,10 @@ import Bindings.Libusb.HandlingAndEnumeration
 #ccall libusb_get_string_descriptor_ascii , Ptr <libusb_device_handle> -> \
   Word8 -> Ptr CUChar -> CInt -> IO CInt
 
-#ccall libusb_get_descriptor , Ptr <libusb_device_handle> -> \
+#cinline libusb_get_descriptor , Ptr <libusb_device_handle> -> \
   Word8 -> Word8 -> Ptr CUChar -> \
   CInt -> IO CInt
 
-#ccall libusb_get_string_descriptor , Ptr <libusb_device_handle> -> \
+#cinline libusb_get_string_descriptor , Ptr <libusb_device_handle> -> \
   Word8 -> Word16 -> Ptr CUChar -> \
   CInt -> IO CInt
