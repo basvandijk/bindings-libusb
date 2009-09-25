@@ -1,11 +1,12 @@
 #include <bindings.macros.h>
 #include <libusb.h>
 
--- | <http://libusb.sourceforge.net/api-1.0/annotated.html>
+-- | <http://libusb.sourceforge.net/api-1.0/group__desc.html>
 
 module Bindings.Libusb.Descriptors where
 import Foreign
 import Foreign.C
+import Bindings.Libusb.HandlingAndEnumeration
 
 #starttype struct libusb_device_descriptor
 #field bLength , Word8
@@ -71,3 +72,79 @@ import Foreign.C
 #field extra_length , CInt
 #stoptype
 
+#integral_t enum libusb_class_code
+
+#num LIBUSB_CLASS_PER_INTERFACE
+#num LIBUSB_CLASS_AUDIO
+#num LIBUSB_CLASS_COMM
+#num LIBUSB_CLASS_HID
+#num LIBUSB_CLASS_PRINTER
+#num LIBUSB_CLASS_PTP
+#num LIBUSB_CLASS_MASS_STORAGE
+#num LIBUSB_CLASS_HUB
+#num LIBUSB_CLASS_DATA
+#num LIBUSB_CLASS_VENDOR_SPEC
+
+#integral_t enum libusb_descriptor_type
+
+#num LIBUSB_DT_DEVICE
+#num LIBUSB_DT_CONFIG
+#num LIBUSB_DT_STRING
+#num LIBUSB_DT_INTERFACE
+#num LIBUSB_DT_ENDPOINT
+#num LIBUSB_DT_HID
+#num LIBUSB_DT_REPORT
+#num LIBUSB_DT_PHYSICAL
+#num LIBUSB_DT_HUB
+
+#integral_t enum libusb_endpoint_direction
+
+#num LIBUSB_ENDPOINT_IN
+#num LIBUSB_ENDPOINT_OUT
+
+#integral_t enum libusb_transfer_type
+
+#num LIBUSB_TRANSFER_TYPE_CONTROL
+#num LIBUSB_TRANSFER_TYPE_ISOCHRONOUS
+#num LIBUSB_TRANSFER_TYPE_BULK
+#num LIBUSB_TRANSFER_TYPE_INTERRUPT
+
+#integral_t enum libusb_iso_sync_type
+
+#num LIBUSB_ISO_SYNC_TYPE_NONE
+#num LIBUSB_ISO_SYNC_TYPE_ASYNC
+#num LIBUSB_ISO_SYNC_TYPE_ADAPTIVE
+#num LIBUSB_ISO_SYNC_TYPE_SYNC
+
+#integral_t enum libusb_iso_usage_type
+
+#num LIBUSB_ISO_USAGE_TYPE_DATA
+#num LIBUSB_ISO_USAGE_TYPE_FEEDBACK
+#num LIBUSB_ISO_USAGE_TYPE_IMPLICIT
+
+#ccall libusb_get_device_descriptor , Ptr <libusb_device> -> \
+  Ptr <libusb_device_descriptor> -> IO CInt
+
+#ccall libusb_get_active_config_descriptor , Ptr <libusb_device> -> \
+  Ptr (Ptr <libusb_config_descriptor>) -> IO CInt
+
+#ccall libusb_get_config_descriptor , Ptr <libusb_device> -> \
+  Word8 -> Ptr (Ptr <libusb_config_descriptor>) -> IO CInt
+
+#ccall libusb_get_config_descriptor_by_value , Ptr <libusb_device> -> \
+  Word8 -> Ptr (Ptr <libusb_config_descriptor>) -> \
+  IO CInt
+
+#ccall libusb_free_config_descriptor , Ptr <libusb_config_descriptor> -> \
+  IO ()
+
+#ccall libusb_get_string_descriptor_ascii , Ptr <libusb_device_handle> -> \
+  Word8 -> Ptr CUChar -> CInt -> IO CInt
+
+#ccall libusb_get_descriptor , Ptr <libusb_device_handle> -> \
+  Word8 -> Word8 -> Ptr CUChar -> \
+  CInt -> IO CInt
+
+#ccall libusb_get_string_descriptor , Ptr <libusb_device_handle> -> \
+  Word8 -> Word16 -> Ptr CUChar -> \
+  CInt -> IO CInt

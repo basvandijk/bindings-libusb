@@ -17,7 +17,8 @@ library
     ForeignFunctionInterface
   build-depends:
     base >= 3 && < 5,
-    bindings-common >= 1 && < 2
+    bindings-common >= 1 && < 2,
+    bindings-posix >= 1 && < 2
   exposed-modules:
     Bindings.Libusb
     Bindings.Libusb.Asynchronous
