@@ -32,3 +32,4 @@ library
     src/include
   extra-libraries:
     usb-1.0
+  c-sources: src/inlines.c

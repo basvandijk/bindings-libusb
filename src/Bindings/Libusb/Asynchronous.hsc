@@ -59,9 +59,9 @@ import Bindings.Libusb.HandlingAndEnumeration
 #ccall libusb_free_transfer , Ptr <libusb_transfer> -> IO ()
 #ccall libusb_submit_transfer , Ptr <libusb_transfer> -> IO CInt
 #ccall libusb_cancel_transfer , Ptr <libusb_transfer> -> IO CInt
-#ccall libusb_control_transfer_get_data , \
+#cinline libusb_control_transfer_get_data , \
   Ptr <libusb_transfer> -> IO (Ptr CUChar)
-#ccall libusb_control_transfer_get_setup , \
+#cinline libusb_control_transfer_get_setup , \
   Ptr <libusb_transfer> -> IO (Ptr <libusb_control_setup>)
 #ccall libusb_fill_control_transfer , \
   Ptr <libusb_transfer> -> Ptr <libusb_device_handle> -> \
