@@ -32,7 +32,7 @@ import Bindings.Libusb.InitializationDeinitialization
 #ccall libusb_get_device , Ptr <libusb_device_handle> -> \
   IO (Ptr <libusb_device>)
 #ccall libusb_get_configuration , Ptr <libusb_device_handle> -> \
-  Ptr int -> IO CInt
+  Ptr CInt -> IO CInt
 #ccall libusb_set_configuration , Ptr <libusb_device_handle> -> \
   CInt -> IO CInt
 #ccall libusb_claim_interface , Ptr <libusb_device_handle> -> \
