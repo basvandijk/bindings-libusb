@@ -35,6 +35,7 @@ import Bindings.Libusb.HandlingAndEnumeration
 #field user_data , Ptr ()
 #field buffer , Ptr CUChar
 #field num_iso_packets , CInt
+#flexible_array_member iso_packet_desc , <libusb_iso_packet_descriptor>
 #stoptype
 
 #callback libusb_transfer_cb_fn , Ptr <libusb_transfer> -> IO ()
