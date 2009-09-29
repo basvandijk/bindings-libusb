@@ -28,8 +28,5 @@ library
     Bindings.Libusb.Miscellaneous
     Bindings.Libusb.PollingAndTiming
     Bindings.Libusb.Synchronous
-  include-dirs:
-    src/include
-  extra-libraries:
-    usb-1.0
   c-sources: src/inlines.c
+  pkgconfig-depends: libusb-1.0 >= 1.0
