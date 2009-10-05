@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__syncio.html>
 
 module Bindings.Libusb.Synchronous where
-import Foreign
-import Foreign.C
+#strict_import
 import Bindings.Libusb.HandlingAndEnumeration
 
 #ccall libusb_control_transfer , Ptr <libusb_device_handle> -> \

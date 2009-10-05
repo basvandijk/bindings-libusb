@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__desc.html>
 
 module Bindings.Libusb.Descriptors where
-import Foreign
-import Foreign.C
+#strict_import
 import Bindings.Libusb.HandlingAndEnumeration
 
 #starttype struct libusb_device_descriptor

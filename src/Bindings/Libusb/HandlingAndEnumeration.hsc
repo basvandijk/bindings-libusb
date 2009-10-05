@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__dev.html>
 
 module Bindings.Libusb.HandlingAndEnumeration where
-import Foreign
-import Foreign.C
+#strict_import
 import Bindings.Posix.Sys.Types
 import Bindings.Libusb.InitializationDeinitialization
 

@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__asyncio.html>
 
 module Bindings.Libusb.Asynchronous where
-import Foreign
-import Foreign.C
+#strict_import
 import Bindings.Libusb.HandlingAndEnumeration
 
 #starttype struct libusb_control_setup

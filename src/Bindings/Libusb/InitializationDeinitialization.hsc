@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__lib.html>
 
 module Bindings.Libusb.InitializationDeinitialization where
-import Foreign
-import Foreign.C
+#strict_import
 
 #opaque_t libusb_context
 

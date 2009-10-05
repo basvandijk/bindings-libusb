@@ -9,6 +9,7 @@ module Bindings.Libusb (
   module Bindings.Libusb.PollingAndTiming,
   module Bindings.Libusb.Synchronous,
  ) where
+import Prelude ()
 import Bindings.Libusb.Asynchronous
 import Bindings.Libusb.Descriptors
 import Bindings.Libusb.HandlingAndEnumeration

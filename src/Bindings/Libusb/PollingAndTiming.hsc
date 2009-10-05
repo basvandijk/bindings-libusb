@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__poll.html>
 
 module Bindings.Libusb.PollingAndTiming where
-import Foreign
-import Foreign.C
+#strict_import
 import Bindings.Posix.Sys.Select
 import Bindings.Libusb.InitializationDeinitialization
 

@@ -4,8 +4,7 @@
 -- | <http://libusb.sourceforge.net/api-1.0/group__misc.html>
 
 module Bindings.Libusb.Miscellaneous where
-import Foreign
-import Foreign.C
+#strict_import
 
 #cinline libusb_cpu_to_le16 , Word16 -> Word16
 #cinline libusb_le16_to_cpu , Word16 -> Word16
