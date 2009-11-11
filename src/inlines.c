@@ -1,3 +1,4 @@
+#include <bindings.cmacros.h>
 #include <libusb.h>
 
 unsigned char*

@@ -1,12 +1,13 @@
-#include <bindings.macros.h>
+#include <bindings.dsl.h>
 #include <libusb.h>
 
 -- | <http://libusb.sourceforge.net/api-1.0/group__poll.html>
 
 module Bindings.Libusb.PollingAndTiming where
 #strict_import
-import Bindings.Posix.Sys.Select
 import Bindings.Libusb.InitializationDeinitialization
+
+#opaque_t struct timeval
 
 #starttype struct libusb_pollfd
 #field fd , CInt

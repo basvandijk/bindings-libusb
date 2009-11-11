@@ -1,15 +1,16 @@
-#include <bindings.macros.h>
+#include <bindings.dsl.h>
 #include <libusb.h>
 
 -- | <http://libusb.sourceforge.net/api-1.0/group__dev.html>
 
 module Bindings.Libusb.HandlingAndEnumeration where
 #strict_import
-import Bindings.Posix.Sys.Types
 import Bindings.Libusb.InitializationDeinitialization
 
 #opaque_t libusb_device
 #opaque_t libusb_device_handle
+
+#integral_t ssize_t
 
 #ccall libusb_get_device_list , Ptr <libusb_context> -> \
   Ptr (Ptr (Ptr <libusb_device>)) -> IO <ssize_t>
