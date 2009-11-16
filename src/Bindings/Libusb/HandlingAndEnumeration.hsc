@@ -20,6 +20,7 @@ import Bindings.Libusb.InitializationDeinitialization
 #ccall libusb_get_device_address , Ptr <libusb_device> -> IO Word8
 #ccall libusb_get_max_packet_size , Ptr <libusb_device> -> \
   CUChar -> IO CInt
+#ccall libusb_get_max_iso_packet_size , Ptr <libusb_device> -> CUChar -> IO CInt
 #ccall libusb_ref_device , Ptr <libusb_device> -> \
   IO (Ptr <libusb_device>)
 #ccall libusb_unref_device , Ptr <libusb_device> -> IO ()
