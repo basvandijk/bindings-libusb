@@ -9,7 +9,9 @@ build-type:    Simple
 category:      FFI
 bug-reports:   https://github.com/basvandijk/bindings-libusb/issues
 synopsis:      Low level bindings to libusb.
-description:   Low level bindings to @libusb-1.*@.
+description:   Low level bindings to @libusb-1.*@:
+               .
+               <http://libusb.sourceforge.net/api-1.0/>
                .
 	       This package uses @bindings-DSL@
                and conforms to its naming convention.
