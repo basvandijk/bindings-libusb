@@ -1,16 +1,28 @@
+name:          bindings-libusb
+version:       1.4.4
 cabal-version: >= 1.2.3
-name: bindings-libusb
-homepage: http://bitbucket.org/mauricio/bindings-libusb
-synopsis:
-  Low level bindings to libusb.
-version: 1.4.4
-license: BSD3
-license-file: LICENSE
-maintainer: Maurício C. Antunes <mauricio.antunes@gmail.com>
-author: Maurício C. Antunes
-build-type: Simple
-category: FFI
-bug-reports: http://bitbucket.org/mauricio/bindings-libusb/issues
+license:       BSD3
+license-file:  LICENSE
+author:        Maurício C. Antunes <mauricio.antunes@gmail.com>
+maintainer:    Bas van Dijk <v.dijk.bas@gmail.com>
+build-type:    Simple
+category:      FFI
+bug-reports:   https://github.com/basvandijk/bindings-libusb/issues
+synopsis:      Low level bindings to libusb.
+description:   Low level bindings to @libusb-1.*@.
+               .
+	       This package uses @bindings-DSL@
+               and conforms to its naming convention.
+               .
+               For a higher-level and more Haskell friendly binding
+               (which uses this package) see the @usb@ package:
+               .
+               <http://hackage.haskell.org/package/usb>
+
+source-repository head
+  Type:     git
+  Location: git://github.com/basvandijk/bindings-libusb.git
+
 library
   hs-source-dirs: src
   extensions:
