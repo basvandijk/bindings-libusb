@@ -39,5 +39,4 @@ library
     Bindings.Libusb.Synchronous
   c-sources:
     src/inlines.c
-    src/core.c
   pkgconfig-depends: libusb-1.0 >= 1.0
