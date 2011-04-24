@@ -1,3 +1,5 @@
+{-# LANGUAGE ForeignFunctionInterface #-}
+
 #include <bindings.dsl.h>
 #include <libusb.h>
 
