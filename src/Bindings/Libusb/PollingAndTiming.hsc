@@ -31,6 +31,7 @@ import Bindings.Libusb.InitializationDeinitialization
 #ccall libusb_handle_events , Ptr <libusb_context> -> IO CInt
 #ccall libusb_handle_events_locked , Ptr <libusb_context> ->  \
   Ptr <timeval> -> IO CInt
+#ccall libusb_pollfds_handle_timeouts , Ptr <libusb_context> -> IO CInt
 #ccall libusb_get_next_timeout , Ptr <libusb_context> ->  \
   Ptr <timeval> -> IO CInt
 #ccall libusb_set_pollfd_notifiers , Ptr <libusb_context> ->  \
