@@ -29,7 +29,7 @@ library
   hs-source-dirs: src
   build-depends:
     base >= 3 && < 5,
-    bindings-DSL >= 1.0 && < 1.1
+    bindings-DSL >= 1.0.10 && < 1.1
   exposed-modules:
     Bindings.Libusb
     Bindings.Libusb.Asynchronous
