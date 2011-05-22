@@ -41,4 +41,9 @@ library
     Bindings.Libusb.Synchronous
   c-sources:
     src/inlines.c
-  pkgconfig-depends: libusb-1.0 >= 1.0.5
+
+  if os(windows)
+    includes: libusb.h
+    extra-libraries: libusb-1.0
+  else
+    pkgconfig-depends: libusb-1.0 >= 1.0.5
