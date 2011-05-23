@@ -15,8 +15,17 @@ Make sure the `libusb` C library is installed:
 
 * *Ubuntu Linux*: `sudo apt-get install libusb-1.0-0-dev`
 * *Gentoo Linux*: `sudo emerge libusb`
-* *MS Windows*: Make sure to use the following cabal options:
+* *MS Windows*:
+    [Download `libusb` for MS Windows](http://www.libusb.org/wiki/windows_backend#LatestBinarySnapshots)
+     and extract it somewhere e.g. `C:\Program Files\libusb\libusb1`.
 
-    --extra-include-dirs="C:\Program Files\libusb\libusb1\include\libusb-1.0"
+    Important build-time files: `libusb-1.0\include\libusb.h` and
+    `MinGW32\dll\libusb-1.0.dll.a`
 
-    --extra-lib-dirs="C:\Program Files\libusb\libusb1\MinGW32\dll"
+    Important run-time files: `MinGW32\dll\libusb-1.0.dll`
+
+    Make sure to use the following cabal options:
+
+        --extra-include-dirs="C:\Program Files\libusb\libusb1\include\libusb-1.0"
+
+        --extra-lib-dirs="C:\Program Files\libusb\libusb1\MinGW32\dll"
