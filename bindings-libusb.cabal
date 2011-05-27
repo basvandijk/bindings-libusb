@@ -29,7 +29,7 @@ library
   hs-source-dirs: src
   build-depends:
     base >= 3 && < 5,
-    bindings-DSL >= 1.0.11 && < 1.1
+    bindings-DSL >= 1.0.12 && < 1.1
   exposed-modules:
     Bindings.Libusb
     Bindings.Libusb.Asynchronous
@@ -45,5 +45,6 @@ library
   if os(windows)
     includes: libusb.h
     extra-libraries: libusb-1.0
+    cc-options: -DBINDINGS_STDCALLCONV
   else
     pkgconfig-depends: libusb-1.0 >= 1.0.5
