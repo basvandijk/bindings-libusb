@@ -14,13 +14,15 @@ description:   Low level bindings to @libusb-1.*@:
                .
                <http://libusb.sourceforge.net/api-1.0/>
                .
-	       This package uses @bindings-DSL@
+               This package uses @bindings-DSL@
                and conforms to its naming convention.
                .
                For a higher-level and more Haskell friendly binding
                (which uses this package) see the @usb@ package:
                .
                <http://hackage.haskell.org/package/usb>
+
+extra-source-files: README.markdown
 
 source-repository head
   Type:     git
