@@ -1,13 +1,13 @@
 name:          bindings-libusb
-version:       1.4.4
-cabal-version: >= 1.2.3
+version:       1.4.4.1
+cabal-version: >= 1.6
 license:       BSD3
 license-file:  LICENSE
 author:        Maurício C. Antunes <mauricio.antunes@gmail.com>
 maintainer:    Bas van Dijk <v.dijk.bas@gmail.com>
 build-type:    Simple
 category:      FFI
-homepage:      https://github.com/basvandijk/bindings-libusb/
+homepage:      https://github.com/basvandijk/bindings-libusb
 bug-reports:   https://github.com/basvandijk/bindings-libusb/issues
 synopsis:      Low level bindings to libusb.
 description:   Low level bindings to @libusb-1.*@:
@@ -32,7 +32,7 @@ library
   hs-source-dirs: src
   build-depends:
     base >= 3 && < 5,
-    bindings-DSL >= 1.0.14 && < 1.1
+    bindings-DSL >= 1.0.15 && < 1.1
   exposed-modules:
     Bindings.Libusb
     Bindings.Libusb.Asynchronous
