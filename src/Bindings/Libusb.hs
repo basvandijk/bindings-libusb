@@ -1,5 +1,6 @@
 module Bindings.Libusb
-    ( module Bindings.Libusb.Asynchronous
+    ( module Bindings.Libusb.DeviceHotplugEventNotification
+    , module Bindings.Libusb.Asynchronous
     , module Bindings.Libusb.Descriptors
     , module Bindings.Libusb.HandlingAndEnumeration
     , module Bindings.Libusb.InitializationDeinitialization
@@ -8,6 +9,7 @@ module Bindings.Libusb
     , module Bindings.Libusb.Synchronous
     ) where
 
+import Bindings.Libusb.DeviceHotplugEventNotification
 import Bindings.Libusb.Asynchronous
 import Bindings.Libusb.Descriptors
 import Bindings.Libusb.HandlingAndEnumeration

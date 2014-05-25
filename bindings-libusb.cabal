@@ -35,6 +35,7 @@ library
     bindings-DSL >= 1.0.15 && < 1.1
   exposed-modules:
     Bindings.Libusb
+    Bindings.Libusb.DeviceHotplugEventNotification
     Bindings.Libusb.Asynchronous
     Bindings.Libusb.Descriptors
     Bindings.Libusb.HandlingAndEnumeration
@@ -50,4 +51,4 @@ library
     extra-libraries: libusb-1.0
     cc-options: -DBINDINGS_STDCALLCONV
   else
-    pkgconfig-depends: libusb-1.0 >= 1.0.15
+    pkgconfig-depends: libusb-1.0 >= 1.0.16
