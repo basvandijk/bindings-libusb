@@ -8,6 +8,15 @@
 module Bindings.Libusb.Miscellaneous where
 #strict_import
 
+#integral_t enum libusb_capability
+
+#num LIBUSB_CAP_HAS_CAPABILITY
+#num LIBUSB_CAP_HAS_HOTPLUG
+#num LIBUSB_CAP_HAS_HID_ACCESS
+#num LIBUSB_CAP_SUPPORTS_DETACH_KERNEL_DRIVER
+
+#ccall libusb_has_capability , <libusb_capability> -> CInt
+
 #cinline libusb_cpu_to_le16 , Word16 -> Word16
 #cinline libusb_le16_to_cpu , Word16 -> Word16
 
@@ -55,4 +64,3 @@ module Bindings.Libusb.Miscellaneous where
 #num LIBUSB_ERROR_NO_MEM
 #num LIBUSB_ERROR_NOT_SUPPORTED
 #num LIBUSB_ERROR_OTHER
-

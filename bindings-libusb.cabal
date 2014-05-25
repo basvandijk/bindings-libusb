@@ -1,5 +1,5 @@
 name:          bindings-libusb
-version:       1.4.4.1
+version:       1.4.5.0
 cabal-version: >= 1.6
 license:       BSD3
 license-file:  LICENSE
@@ -50,4 +50,4 @@ library
     extra-libraries: libusb-1.0
     cc-options: -DBINDINGS_STDCALLCONV
   else
-    pkgconfig-depends: libusb-1.0 >= 1.0.5
+    pkgconfig-depends: libusb-1.0 >= 1.0.15
