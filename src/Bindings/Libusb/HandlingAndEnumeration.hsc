@@ -14,12 +14,42 @@ import Bindings.Libusb.InitializationDeinitialization
 
 #integral_t ssize_t
 
+#integral_t enum libusb_speed
+#num LIBUSB_SPEED_UNKNOWN
+#num LIBUSB_SPEED_LOW
+#num LIBUSB_SPEED_FULL
+#num LIBUSB_SPEED_HIGH
+#num LIBUSB_SPEED_SUPER
+
+#integral_t enum libusb_supported_speed
+#num LIBUSB_LOW_SPEED_OPERATION
+#num LIBUSB_FULL_SPEED_OPERATION
+#num LIBUSB_HIGH_SPEED_OPERATION
+#num LIBUSB_SUPER_SPEED_OPERATION
+
+#integral_t enum libusb_usb_2_0_extension_attributes
+#num LIBUSB_BM_LPM_SUPPORT
+
+#integral_t enum libusb_ss_usb_device_capability_attributes
+#num LIBUSB_BM_LTM_SUPPORT
+
+#integral_t enum libusb_bos_type
+#num LIBUSB_BT_WIRELESS_USB_DEVICE_CAPABILITY
+#num LIBUSB_BT_USB_2_0_EXTENSION
+#num LIBUSB_BT_SS_USB_DEVICE_CAPABILITY
+#num LIBUSB_BT_CONTAINER_ID
+
 #ccall libusb_get_device_list , Ptr <libusb_context> -> \
   Ptr (Ptr (Ptr <libusb_device>)) -> IO <ssize_t>
 #ccall libusb_free_device_list , Ptr (Ptr <libusb_device>) -> \
   CInt -> IO ()
 #ccall libusb_get_bus_number , Ptr <libusb_device> -> IO Word8
+#ccall libusb_get_port_number , Ptr <libusb_device> -> IO Word8
+#ccall libusb_get_port_numbers , Ptr <libusb_device> -> Ptr Word8 -> \
+  CInt -> IO CInt
+#ccall libusb_get_parent , Ptr <libusb_device> -> IO (Ptr <libusb_device>)
 #ccall libusb_get_device_address , Ptr <libusb_device> -> IO Word8
+#ccall libusb_get_device_speed , Ptr <libusb_device> -> IO CInt
 #ccall libusb_get_max_packet_size , Ptr <libusb_device> -> \
   CUChar -> IO CInt
 #ccall libusb_get_max_iso_packet_size , Ptr <libusb_device> -> CUChar -> IO CInt
@@ -52,4 +82,6 @@ import Bindings.Libusb.InitializationDeinitialization
 #ccall libusb_detach_kernel_driver , Ptr <libusb_device_handle> -> \
   CInt -> IO CInt
 #ccall libusb_attach_kernel_driver , Ptr <libusb_device_handle> -> \
+  CInt -> IO CInt
+#ccall libusb_set_auto_detach_kernel_driver , Ptr <libusb_device_handle> -> \
   CInt -> IO CInt
