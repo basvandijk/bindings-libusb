@@ -30,6 +30,10 @@ import Bindings.Libusb.InitializationDeinitialization
   Ptr <timeval> -> IO CInt
 #ccall libusb_handle_events_timeout , Ptr <libusb_context> ->  \
   Ptr <timeval> -> IO CInt
+#ccall libusb_handle_events_completed , Ptr <libusb_context> ->  \
+  Ptr CInt -> IO CInt
+#ccall libusb_handle_events_timeout_completed , Ptr <libusb_context> ->  \
+  Ptr <timeval> -> Ptr CInt -> IO CInt
 #ccall libusb_handle_events , Ptr <libusb_context> -> IO CInt
 #ccall libusb_handle_events_locked , Ptr <libusb_context> ->  \
   Ptr <timeval> -> IO CInt
