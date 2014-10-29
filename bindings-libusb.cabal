@@ -22,7 +22,7 @@ description:   Low level bindings to @libusb-1.*@:
                .
                <http://hackage.haskell.org/package/usb>
 
-extra-source-files: README.markdown
+extra-source-files: README.markdown, default.nix, shell.nix
 
 source-repository head
   Type:     git

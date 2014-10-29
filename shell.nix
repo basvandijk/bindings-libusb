@@ -9,6 +9,8 @@ let
 in pkgs.myEnvFun {
      name = haskellPackages.bindingsLibusb.name;
      buildInputs = [
+       pkgs.pkgconfig
+       pkgs.libusb1
        (haskellPackages.ghcWithPackages (hs: ([
          hs.cabalInstall
          hs.hscolour
